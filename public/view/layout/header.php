@@ -42,7 +42,6 @@
     </div>
 
     <div class="d-flex flex-wrap justify-content-end p-3 gap-2 mb-5  animate__animated animate__fadeIn">
-        <a href="/list-prize" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-gift"></i> <span class="d-none d-lg-block">Giải thưởng</span></a>
-        <a href="/list-guest" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-person"></i> <span class="d-none d-lg-block">Danh sách tham dự</span></a>
-        <a <?= !($page == 'home') ?: 'hidden' ?> href="/" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-house"></i> Trang chủ</a>
+        <a <?= !($page == 'home') ?: 'hidden' ?> href="/" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-gift"></i> <span class="d-none d-lg-block">Danh sách giải thưởng</span></a>
+        <a <?= !($page == 'list-guest') ?: 'hidden' ?> href="/list-guest" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-person"></i> <span class="d-none d-lg-block">Danh sách tham dự</span></a>
     </div>

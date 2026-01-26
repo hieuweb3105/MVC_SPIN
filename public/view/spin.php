@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="/list-prize" class="btn btn-sm px-3 btn-dark text-light-60"><i class="bi bi-gift"></i> DS
+                <a href="/" class="btn btn-sm px-3 btn-dark text-light-60"><i class="bi bi-gift"></i> DS
                     giải</a>
                 <a href="/result/<?= $id_prize ?>" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i
                         class="bi bi-eye"></i> Chi tiết DS trúng</a>
