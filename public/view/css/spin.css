@@ -28,3 +28,25 @@
     padding: 4px 8px;
     font-size: 18px;
 }
+
+/* Hiệu ứng hiện dần và bay nhẹ lên */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prize-item {
+    opacity: 0; /* Mặc định ẩn để chuẩn bị chạy animation */
+    animation: fadeInUp 0.5s ease forwards;
+    display: block; /* Hiện mỗi mã số trên 1 dòng */
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffc107; /* Màu vàng cảnh báo của Bootstrap */
+}
