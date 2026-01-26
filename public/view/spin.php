@@ -40,10 +40,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="/" class="btn btn-sm px-3 btn-dark text-light-60"><i class="bi bi-gift"></i> DS
-                    giải thưởng</a>
-                <a href="/result/<?= $id_prize ?>" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i
-                        class="bi bi-eye"></i> Chi tiết DS trúng</a>
+                <a href="/" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i class="bi bi-gift"></i> Danh sách giải thưởng</a>
+                <!-- <a href="/result/<?= $id_prize ?>" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i class="bi bi-eye"></i> Chi tiết DS trúng</a> -->
             </div>
         </div>
     </div>
@@ -65,8 +63,7 @@
                     const listWinners = response.list;
                     startVisualSpinning(listWinners);
                 } else {
-                    alert("Có lỗi xảy ra từ máy chủ!");
-                    $btn.removeClass('d-none').prop('disabled', false);
+                    location.reload();
                 }
             },
             error: function () {
