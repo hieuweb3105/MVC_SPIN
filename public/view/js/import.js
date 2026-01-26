@@ -20,7 +20,7 @@ $(document).ready(function() {
             data: form_data,
             type: 'post',
             beforeSend: function() {
-                $('#btn_import').text('Đang xử lý...').prop('disabled', true);
+                $('#btn_import').text('<span class="spinner-border spinner-border-sm"></span> Đang xử lý...').prop('disabled', true);
             },
             success: function(res) {
                 location.reload();

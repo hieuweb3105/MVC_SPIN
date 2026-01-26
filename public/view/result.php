@@ -57,3 +57,67 @@
     </table>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+    $('#btn_export').on('click', function() {
+        const $btn = $(this);
+
+        // Tránh nhấn nhiều lần khi đang xử lý
+        if ($btn.hasClass('disabled')) return;
+        $btn.addClass('disabled').html('<span class="spinner-border spinner-border-sm"></span> Đang xử lý...');
+
+        $.ajax({
+            url: `/export/<?= $id_prize ?>/api`,
+            method: 'GET',
+            success: function(response) {
+                if (response.status === "200 - OK" && response.data.length > 0) {
+                    exportToExcel(response.data);
+                } else {
+                    alert("Không có dữ liệu để xuất!");
+                }
+            },
+            error: function() {
+                alert("Lỗi kết nối máy chủ!");
+            },
+            complete: function() {
+                // Khôi phục trạng thái nút
+                $btn.removeClass('disabled').html('<i class="bi bi-file-earmark-text"></i> Xuất danh sách');
+            }
+        });
+    });
+
+    function exportToExcel(apiData) {
+        // 1. Định dạng lại dữ liệu cho đúng cột yêu cầu
+        const formattedData = apiData.map((item, index) => {
+            return {
+                "STT": index + 1,
+                "Mã số": item.name_guest.toString().padStart(4, '0'), // Định dạng 000x
+                "Tên giải": item.name_prize
+            };
+        });
+
+        // 2. Tạo Workbook và Worksheet
+        const worksheet = XLSX.utils.json_to_sheet(formattedData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Danh sách trúng thưởng");
+
+        // 3. Cấu hình độ rộng cột (tùy chọn cho đẹp)
+        worksheet['!cols'] = [
+            { wch: 10 }, // STT
+            { wch: 15 }, // Mã số
+            { wch: 40 }  // Tên giải
+        ];
+
+        // 4. Tạo tên file theo định dạng export_prize_dd_mm_yyyy
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        const fileName = `export_prize_${day}_${month}_${year}.xlsx`;
+
+        // 5. Xuất file
+        XLSX.writeFile(workbook, fileName);
+    }
+});
+</script>

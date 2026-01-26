@@ -6,9 +6,6 @@
             <button type="button" id="btn_import" class="btn btn-sm btn-danger text-warning border-warning px-3">
                 <i class="bi bi-file-earmark-plus"></i>Nhập danh sách
             </button>
-            <button type="button" id="btn_export" class="btn btn-sm btn-danger text-warning border-warning px-3">
-                <i class="bi bi-file-earmark-text"></i>Xuất danh sách
-            </button>
             <a href="/list-guest/delete" class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
                 <i class="bi bi-file-earmark-x"></i>Xoá danh sách
             </a>
