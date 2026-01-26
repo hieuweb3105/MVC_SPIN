@@ -28,8 +28,8 @@
                     <th class="text-center fw-light bg-dark-80 blur-6">
                         <?= str_pad($name_guest, 4, "0", STR_PAD_LEFT) ?>
                     </th>
-                    <td class="text-end bg-dark-80 blur-6">
-                        <?= $name_prize ?? '<span class="text-light-40">không</span>' ?>
+                    <td class="text-end bg-dark-80 text-light-60 blur-6">
+                        <?= $name_gift_prize ?? '<span class="text-light-40">không</span>' ?>
                     </td>
                 </tr>
             <?php 

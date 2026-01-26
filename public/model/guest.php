@@ -2,7 +2,7 @@
 
 function guest_get_all() {
     return pdo_query(
-        'SELECT g.*, p.name_prize
+        'SELECT g.*, p.name_gift_prize
         FROM guest g
         LEFT JOIN prize p
         ON g.id_prize = p.id_prize'
@@ -23,7 +23,7 @@ function guest_delete_all() {
 
 function guest_has_prize($id_prize) {
     return pdo_query(
-        'SELECT g.*, p.name_prize
+        'SELECT g.*, p.name_gift_prize
         FROM guest g
         LEFT JOIN prize p
         ON g.id_prize = p.id_prize
