@@ -1,0 +1,21 @@
+#count-list div {
+    background-color: #d80b23;
+    color: var(--bs-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    font-size: 50px;
+    border: 1px solid var(--bs-gold);
+    box-shadow: 0 0 12px 2px var(--bs-dark-60);
+
+}
+
+@media (max-width:1199px) {
+    #count-list div {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+    }
+}

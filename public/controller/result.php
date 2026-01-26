@@ -21,6 +21,7 @@ if(get_action_uri(1)) {
 
 //Case : Reset giải
 if(get_action_uri(2) == 'reset') {
+    prize_reset_by_id($id_prize);
     toast_create('success','Reset thành công !');
     route('result/'.$id_prize);
 }

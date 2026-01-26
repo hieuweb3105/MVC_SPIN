@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css">
+
 <div style="margin-top: 25vh" class="d-flex w-100 align-items-center justify-content-center px-3">
     <div class=" col-12">
         <form action="/spin/<?= $id_prize ?>" method="post" class="d-flex flex-column align-items-center gap-3">
@@ -5,7 +7,13 @@
                 <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?> Giải - phần quà </span>
                 <span><?= $info_prize['name_gift_prize'] ?></span>  
             </div>
-            <button name="choose_spin" type="submit" class="btn btn-danger border-2 border-warning text-warning shadow fw-bold px-4 animate__animated animate__heartBeat animate__infinite mt-5">
+            <div id="count-list" class="d-flex gap-2 gap-md-3 my-4">
+                <div class="count-item">0</div>
+                <div class="count-item">0</div>
+                <div class="count-item">0</div>
+                <div class="count-item">0</div>
+            </div>
+            <button name="choose_spin" type="submit" class="btn btn-danger border-2 border-warning text-warning shadow fw-bold px-4 animate__animated animate__heartBeat animate__infinite">
                 Quay Thưởng
             </button>
         </form>

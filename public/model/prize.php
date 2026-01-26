@@ -28,3 +28,10 @@ function prize_spin($id_prize,$quantity_prize) {
             ,$id_prize
     );
 }
+
+function prize_reset_by_id($id) {
+    pdo_execute(
+        'UPDATE guest SET id_prize = NULL WHERE id_prize = ?'
+        ,$id
+    );
+}
