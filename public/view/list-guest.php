@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="<?= URL_P_V ?>css/list-guest.css">
+
+<div style="margin-top:20vh" class="row justify-content-center align-items-center">
+    <div class="col-12 col-md-8 mt-lg-5">
+        <div class="col-12 mb-2 d-flex gap-1">
+            <button type="button" id="btn_import" class="btn btn-sm btn-outline-light px-3">
+                Nhập danh sách
+            </button>
+            <button type="button" id="btn_export" class="btn btn-sm btn-outline-light px-3">
+                Xuất danh sách
+            </button>
+            <a href="/list-guest/delete" type="button" id="btn_import" class="btn btn-sm btn-danger border-light px-3 <?= $list_guest ?: 'disabled' ?>">
+                Xoá danh sách
+            </a>
+            <input type="file" id="file_excel" accept=".xlsx, .xls" class="d-none">
+        </div>
+        <table class="table table-dark table-hover">
+        <thead>
+            <tr class="align-middle">
+                <th class="bg-dark-80 blur-6">ID</th>
+                <th class="text-start bg-dark-80 blur-6">Họ và tên</th>
+                <th class="text-end bg-dark-80 blur-6">Giải trúng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+            if($list_guest) :
+                foreach ($list_guest as $guest): 
+                extract($guest);
+            ?>
+                <tr class="align-middle fw-light small">
+                    <th class="fw-light bg-dark-80 blur-6">
+                        <?= $id_guest ?>
+                    </th>
+                    <td class="text-start bg-dark-80 blur-6">
+                        <?= $name_guest ?>
+                    </td>
+                    <td class="text-end bg-dark-80 blur-6">
+                        <?= $name_prize ?? '<span class="text-light-40">không</span>' ?>
+                    </td>
+                </tr>
+            <?php 
+                endforeach;
+            else : 
+            ?>
+            <tr class="align-middle fw-light small">
+                <td colspan="3" class="fw-light bg-dark-80 blur-6 text-center text-light-40 small py-3">
+                    <i>(Danh sách trống)</i>
+                </td>
+            </tr>
+            <?php endif ?>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+<script src="<?= URL_P_V ?>js/import.js"></script>

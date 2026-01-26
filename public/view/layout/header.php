@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- CSS Custom -->
-    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.0.1">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.0.0">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css">
 </head>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="d-flex flex-wrap justify-content-end p-3 gap-2 mb-5  animate__animated animate__fadeIn">
-        <a href="/list-prize" class="btn btn-sm btn-outline-light"> <i class="bi bi-gift"></i> <span class="d-none d-lg-block">Giải thưởng</span></a>
-        <a href="/list-guest" class="btn btn-sm btn-outline-light"> <i class="bi bi-person"></i> <span class="d-none d-lg-block">Danh sách tham dự</span></a>
-        <a <?= !($page == 'home') ?: 'hidden' ?> href="/" class="btn btn-sm btn-outline-light"> <i class="bi bi-house"></i> Trang chủ</a>
+        <a href="/list-prize" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-gift"></i> <span class="d-none d-lg-block">Giải thưởng</span></a>
+        <a href="/list-guest" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-person"></i> <span class="d-none d-lg-block">Danh sách tham dự</span></a>
+        <a <?= !($page == 'home') ?: 'hidden' ?> href="/" class="btn btn-sm btn-danger text-warning border-warning shadow"> <i class="bi bi-house"></i> Trang chủ</a>
     </div>
