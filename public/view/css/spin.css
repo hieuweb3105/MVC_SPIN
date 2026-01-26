@@ -21,32 +21,29 @@
 }
 
 #list-has-prize span {
+    opacity: 0; /* Ẩn lúc đầu */
     background: var(--bs-light-80);
     color: var(--bs-dark);
     font-weight: bold;
-    border-radius: 12px;
-    padding: 4px 8px;
-    font-size: 18px;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 12px;
+    animation: prizeShow 0.3s ease forwards;
+    width: 2.5vw;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
 }
 
-/* Hiệu ứng hiện dần và bay nhẹ lên */
-@keyframes fadeInUp {
+@keyframes prizeShow {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: scale(0.5);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
-}
-
-.prize-item {
-    opacity: 0; /* Mặc định ẩn để chuẩn bị chạy animation */
-    animation: fadeInUp 0.5s ease forwards;
-    display: block; /* Hiện mỗi mã số trên 1 dòng */
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #ffc107; /* Màu vàng cảnh báo của Bootstrap */
 }
