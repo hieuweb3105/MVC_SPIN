@@ -1,5 +1,5 @@
 body {
     background-repeat: repeat !important; 
-    background-size: auto;
+    background-size: 100% auto;
     background-position: top;
 }
