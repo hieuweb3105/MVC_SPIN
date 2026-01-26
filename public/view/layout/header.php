@@ -35,7 +35,7 @@
 
     <div class="linear-bg"></div>
 
-    <div style="top:25vh" class="position-absolute start-50 translate-middle title-gold text-nowrap">
+    <div style="top:25vh" class="position-absolute start-50 translate-middle title-gold col-12 text-center">
         <?= $title ?>
     </div>
 

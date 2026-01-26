@@ -2,8 +2,10 @@
 
 # [MODEL]
 model('public','prize');
+model('public','guest');
 
 # [HANDLE
+
 //Case : Truy cập giải
 if(get_action_uri(1)) {
     // input
@@ -17,18 +19,18 @@ if(get_action_uri(1)) {
     }
 }else view_error(400);
 
-// Case : Quay thưởng
-if(isset($_POST['choose_spin'])) {
-    prize_spin($get_prize['id_prize'],$get_prize['quantity_prize']);
-    toast_create('success','Quay thành công !');
+//Case : Reset giải
+if(get_action_uri(2) == 'reset') {
+    toast_create('success','Reset thành công !');
     route('result/'.$id_prize);
 }
 
-# [DATA
+# [DATA]
 $data = [
-    'id_prize' => $id_prize,
     'info_prize' => $get_prize,
+    'list_guest' => guest_has_prize($id_prize),
 ];
 
+
 # [RENDER]
-view('public','spin','Quay Giải : '.$get_prize['name_prize'],$data);
+view('public','result','Danh sách trúng thưởng',$data);

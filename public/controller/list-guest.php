@@ -13,7 +13,7 @@ if(get_action_uri(1) == 'delete') {
 }
 
 
-# [DATA
+# [DATA]
 $data = [
     'list_guest' => guest_get_all(),
 ];

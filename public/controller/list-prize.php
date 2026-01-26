@@ -2,6 +2,7 @@
 
 # [MODEL]
 model('public','prize');
+model('public','guest');
 
 # [DATA]
 $data = [

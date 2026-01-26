@@ -2,10 +2,10 @@
     <div class=" col-12">
         <form action="/spin/<?= $id_prize ?>" method="post" class="d-flex flex-column align-items-center gap-3">
             <div class="h2 text-light">
-                <span><?= $info_prize['quantity_prize'] > 10 ?: '0' . $info_prize['quantity_prize'] ?> Giải - phần quà </span>
-                <span><?= $info_prize['name_gift_prize'] ?></span>
+                <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?> Giải - phần quà </span>
+                <span><?= $info_prize['name_gift_prize'] ?></span>  
             </div>
-            <button type="submit" class="btn btn-danger border-2 border-warning text-warning shadow px-3">
+            <button name="choose_spin" type="submit" class="btn btn-danger border-2 border-warning text-warning shadow fw-bold px-4 animate__animated animate__heartBeat animate__infinite mt-5">
                 Quay Thưởng
             </button>
         </form>

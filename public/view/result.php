@@ -1,16 +1,18 @@
 <link rel="stylesheet" href="<?= URL_P_V ?>css/list-guest.css?v=1.0.1">
 
 <div style="margin-top:20vh" class="row justify-content-center align-items-center">
+    <div class="col-12 d-flex align-items-center justify-content-center mt-4">
+        <div class="text-gold h5">
+            <?= $info_prize['name_prize'] ?> - <?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?> giải <?= $info_prize['name_gift_prize'] ?>
+        </div>
+    </div>
     <div class="col-12 col-md-8 mt-lg-5">
         <div class="col-12 mb-2 d-flex gap-1">
-            <button type="button" id="btn_import" class="btn btn-sm btn-danger text-warning border-warning px-3">
-                <i class="bi bi-file-earmark-plus"></i>Nhập danh sách
-            </button>
             <button type="button" id="btn_export" class="btn btn-sm btn-danger text-warning border-warning px-3">
                 <i class="bi bi-file-earmark-text"></i>Xuất danh sách
             </button>
-            <a href="/list-guest/delete" class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
-                <i class="bi bi-file-earmark-x"></i>Xoá danh sách
+            <a href="/result/<?=$info_prize['id_prize']?>/reset" class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
+                <i class="bi bi-arrow-repeat"></i>Reset giải
             </a>
             <input type="file" id="file_excel" accept=".xlsx, .xls" class="d-none">
         </div>
@@ -53,6 +55,3 @@
     </table>
     </div>
 </div>
-
-
-<script src="<?= URL_P_V ?>js/import.js"></script>

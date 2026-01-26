@@ -9,7 +9,7 @@
                 <option value="<?= $id_prize ?>"><?= $name_prize ?></option>
                 <?php endforeach ?>
             </select>
-            <button type="submit" class="btn btn-danger shadow px-3">
+            <button type="submit" class="btn btn-danger text-warning border-warning shadow px-4">
                 Xác nhận
             </button>
         </form>
