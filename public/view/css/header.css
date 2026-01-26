@@ -1,0 +1,32 @@
+#logo-header {
+    width: 36px;
+    height: 36px;
+}
+
+@media (max-width: 992px) {
+    #logo-header {
+        width: 28px;
+    }
+}
+
+.linear-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000000;
+    z-index: -1;
+}
+
+.title-gold {
+    color: var(--bs-gold) !important;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--bs-dark);
+    font-family: 'Playfair Display', serif;
+}
+
+@media (max-width:1199px) {
+    .title-gold {
+        font-size: 28px;
+    }
+}

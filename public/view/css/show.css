@@ -1,0 +1,29 @@
+.progress-group {
+    width: 100%;
+    background-color: var(--bs-gold-blur);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--bs-gold);
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-group,
+.progress-line {
+    height: 35px
+}
+
+
+@media (max-width:1199px) {
+
+    .progress-group,
+    .progress-line {
+        height: 24px;
+    }
+}

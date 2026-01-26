@@ -1,0 +1,12 @@
+# Ẩn tất cả các file trong thư mục assets/admin
+/assets/admin/*
+/assets/file/*
+
+# Ẩn thư mục asset
+/asset/*
+
+/config.php
+rule.txt
+public/controller/deploy-src.php
+
+/vendor
