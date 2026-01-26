@@ -8,7 +8,7 @@
                 <th class="bg-dark-80 blur-6">Tên giải</th>
                 <th class="text-start bg-dark-80 blur-6">Tên quà</th>
                 <th class="text-center bg-dark-80 blur-6">Số lượng giải</th>
-                <th class="text-end bg-dark-80 blur-6">Trạng thái</th>
+                <th class="text-center bg-dark-80 blur-6">Số giải đã quay</th>
                 <th class="text-end bg-dark-80 blur-6">Hành động</th>
             </tr>
         </thead>
@@ -26,21 +26,16 @@
                     <td class="text-center bg-dark-80 blur-6">
                         <?= $quantity_prize ?>
                     </td>
-                    <td class="text-end bg-dark-80 blur-6">
-                        <div class="d-flex align-items-center justify-content-end gap-2">
-                            <?= guest_get_sum_prize($id_prize) ? 'Đã Quay Thưởng' : '<span class="text-light text-light-40">Chưa Quay Thưởng</span>' ?>
-                        </div>
-                    </td>
                     <td class="text-center bg-dark-80 blur-6">
-                    <?php if(guest_get_sum_prize($id_prize)) : ?>
-                        <a href="/result/<?=$id_prize ?>" class="btn btn-sm btn-dark ">
+                        <?= $total_turn ?>
+                    </td>
+                    <td class="bg-dark-80 blur-6 d-flex justify-content-end gap-1">
+                        <a href="/result/<?=$id_prize ?>" class="btn btn-sm btn-dark text-warning border-warning <?= $total_turn ? '' : 'disabled' ?>">
                             <small><i class="bi bi-eye me-1"></i> Xem DS trúng</small>
                         </a>
-                    <?php else : ?>
-                        <a href="/spin/<?=$id_prize ?>" class="btn btn-sm btn-danger text-warning border warning ">
+                        <a href="/spin/<?=$id_prize ?>" class="btn btn-sm btn-danger text-warning border-warning <?= $total_turn !== $quantity_prize ? '' : 'disabled' ?>">
                             <small><i class="bi bi-gift me-1"></i> Quay thưởng</small>
                         </a>
-                    <?php endif ?>
                     </td>
                 </tr>
             <?php endforeach ?>

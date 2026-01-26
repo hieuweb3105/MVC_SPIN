@@ -40,8 +40,9 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <a href="/result/<?= $id_prize ?>" class="btn btn-sm px-3 btn-dark border-warning text-warning"><i class="bi bi-gift"></i> Danh sách trúng</a>
                 <a href="/" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i class="bi bi-gift"></i> Danh sách giải thưởng</a>
-                <!-- <a href="/result/<?= $id_prize ?>" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i class="bi bi-eye"></i> Chi tiết DS trúng</a> -->
+                <a href="/spin/<?= $id_prize ?>" class="btn btn-sm px-3 btn-danger border-warning text-warning"><i class="bi bi-arrow-repeat"></i> Tiếp tục quay</a>
             </div>
         </div>
     </div>

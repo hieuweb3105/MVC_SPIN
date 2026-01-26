@@ -16,7 +16,7 @@ if(get_action_uri(1)) {
         toast_create('failed','Không tìm thấy giải !');
         route();
     }
-    elseif(guest_get_sum_prize($id_prize)) {
+    elseif(prize_check_spin($id_prize)) {
         toast_create('failed','Giải này đã quay rồi !');
         route('result/'.$id_prize);
     }
@@ -24,15 +24,28 @@ if(get_action_uri(1)) {
 
 //Case : Quay thưởng
 if(get_action_uri(2) == 'craft_spin') {
-    // check spin
-    if(!guest_get_sum_prize($id_prize)) prize_spin($get_prize['id_prize'],$get_prize['quantity_prize']);
-    // query
-    $list = guest_has_prize($id_prize);
-    // return
-    view_json(200,[
-        'first' => (int)$list[0]['name_guest'],
-        'list' => $list
-    ]);
+    // Giải 1-2-3-4
+    if($id_prize < 5) {
+        // rand guest
+        $id_guest = prize_spin_one($get_prize['id_prize']);
+        // query
+        $list = guest_has_prize_with_id($id_guest);
+        // return
+        view_json(200,[
+            'list' => $list
+        ]);
+    }
+    // Giải 5 trở lên
+    else {
+        // spin
+        prize_spin($get_prize['id_prize'],$get_prize['quantity_prize']);
+        // query
+        $list = guest_has_prize($id_prize);
+        // return
+        view_json(200,[
+            'list' => $list
+        ]);
+    }
 }
 
 # [DATA

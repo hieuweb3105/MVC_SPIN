@@ -32,9 +32,20 @@ function guest_has_prize($id_prize) {
     );
 }
 
-function guest_get_sum_prize($id_prize) {
+function guest_has_prize_with_id($id_guest) {
+    return pdo_query(
+        'SELECT g.*, p.name_gift_prize
+        FROM guest g
+        LEFT JOIN prize p
+        ON g.id_prize = p.id_prize
+        WHERE g.id_guest = ?'
+        ,$id_guest 
+    );
+}
+
+function guest_get_count_prize($id_prize) {
     return pdo_query_value(
-        'SELECT SUM(id_prize) FROM guest WHERE id_prize = ?'
+        'SELECT COUNT(id_prize) FROM guest WHERE id_prize = ?'
         ,$id_prize
     );
 }
