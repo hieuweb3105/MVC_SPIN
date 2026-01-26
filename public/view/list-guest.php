@@ -17,8 +17,7 @@
         <table class="table table-dark table-hover">
         <thead>
             <tr class="align-middle">
-                <th class="bg-dark-80 blur-6">ID</th>
-                <th class="text-start bg-dark-80 blur-6">Họ và tên</th>
+                <th class="text-center bg-dark-80 blur-6">Mã dự thưởng</th>
                 <th class="text-end bg-dark-80 blur-6">Giải trúng</th>
             </tr>
         </thead>
@@ -29,12 +28,9 @@
                 extract($guest);
             ?>
                 <tr class="align-middle fw-light small">
-                    <th class="fw-light bg-dark-80 blur-6">
-                        <?= $id_guest ?>
+                    <th class="text-center fw-light bg-dark-80 blur-6">
+                        <?= str_pad($name_guest, 4, "0", STR_PAD_LEFT) ?>
                     </th>
-                    <td class="text-start bg-dark-80 blur-6">
-                        <?= $name_guest ?>
-                    </td>
                     <td class="text-end bg-dark-80 blur-6">
                         <?= $name_prize ?? '<span class="text-light-40">không</span>' ?>
                     </td>
