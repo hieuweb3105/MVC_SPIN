@@ -4,8 +4,13 @@
     <div class="col-12 d-flex flex-column align-items-center gap-3">
         <div class="h2 text-light">
             <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
-                Giải - phần quà </span>
+                Giải - Phần Quà </span>
             <span><?= $info_prize['name_gift_prize'] ?></span>
+        </div>
+        <div class="h2 text-light">
+            <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
+                奖项 - 礼品 </span>
+            <span><?= $info_prize['chn_name_gift_prize'] ?></span>
         </div>
         <div id="count-list" class="d-flex gap-2 gap-md-3 my-4">
             <div class="count-item">0</div>
@@ -15,7 +20,7 @@
         </div>
         <button id="btn-spin" type="button"
             class="btn btn-danger border-2 border-warning text-warning shadow fw-bold px-4 animate__animated animate__heartBeat animate__infinite">
-            Quay Thưởng
+            Quay Thưởng/立即抽奖
         </button>
     </div>
 </div>
@@ -29,15 +34,15 @@
             <div class="modal-body">
                 <div class="d-flex flex-column align-items-center justify-content-center gap-3">
                     <div class="h4">
-                        Xin chúc mừng
+                        Xin chúc mừng/热烈祝贺
                     </div>
                     <div class="h5">
                         <span><?= $info_prize['name_prize'].' - ' ?> <?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
-                            Giải - phần quà </span>
+                            Giải/奖项 - phần quà/礼品 </span>
                         <span><?= $info_prize['name_gift_prize'] ?></span>
                     </div>
                     <div class="text-light-60">
-                        Mã số trúng thưởng :
+                        Mã số trúng thưởng/中奖码 :
                     </div>
                     <div id="list-has-prize" class="d-flex gap-1 flex-wrap">
                         <span>Vui lòng chờ</span>

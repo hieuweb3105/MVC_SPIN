@@ -55,4 +55,4 @@ $data = [
 ];
 
 # [RENDER]
-view('public','spin','Quay Giải : '.$get_prize['name_prize'],$data);
+view('public','spin','Quay Giải : '.$get_prize['name_prize'].'<br>抽奖环节 : '.$get_prize['chn_name_prize'],$data);
