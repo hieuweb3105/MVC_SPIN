@@ -11,13 +11,12 @@
     <div class="col-12 col-md-8 mt-lg-5">
         <div class="col-12 mb-2 d-flex justify-content-between gap-1">
             <button type="button" id="btn_export"
-                class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
+                class="btn btn-sm btn-danger text-warning border-warning px-3 shadow <?= $list_guest ?: 'disabled' ?>">
                 <i class="bi bi-file-earmark-text"></i>Xuất danh sách
             </button>
-            <a href="/result/<?= $info_prize['id_prize'] ?>/reset"
-                class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>" data-bs-toggle="modal" data-bs-target="#modalReset">
+            <button type="button" class="btn btn-sm btn-danger text-warning border-warning px-3 shadow <?= $list_guest ?: 'disabled' ?>" data-bs-toggle="modal" data-bs-target="#modalReset">
                 <i class="bi bi-arrow-repeat"></i>Reset giải
-            </a>
+            </button>
             <input type="file" id="file_excel" accept=".xlsx, .xls" class="d-none">
         </div>
         <table class="table table-dark table-hover">
