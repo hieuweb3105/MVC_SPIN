@@ -20,7 +20,7 @@
     }
 }
 
-#list-has-prize span {
+#list-has-prize .prize-item {
     opacity: 0; /* Ẩn lúc đầu */
     background: var(--bs-light-80);
     color: var(--bs-dark);
@@ -31,6 +31,23 @@
     animation: prizeShow 0.3s ease forwards;
     width: 2.5vw;
     height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+#list-has-prize .prize-item-lg {
+    opacity: 0; /* Ẩn lúc đầu */
+    background: var(--bs-light-80);
+    color: var(--bs-dark);
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 26px;
+    animation: prizeShow .5s ease forwards;
+    width: 7vw;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;

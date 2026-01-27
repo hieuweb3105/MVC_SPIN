@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.3">
+<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.4">
 
 <div style="margin-top: 25vh" class="d-flex w-100 align-items-center justify-content-center px-3">
     <div class="col-12 d-flex flex-column align-items-center gap-3">
@@ -103,10 +103,15 @@
         });
         congratsModal.show();
 
-        // 3. Hiệu ứng hiện từng mã số sau mỗi 0.1 giây (100ms)
+        // Kiểm tra số lượng để quyết định class
+        const itemClass = list.length < 10 ? 'prize-item-lg' : 'prize-item';
+
+        // Hiệu ứng hiện từng mã số sau mỗi 0.1 giây (100ms)
         list.forEach((item, index) => {
             const formattedName = item.name_guest.toString().padStart(4, '0');
-            const $span = $(`<span class="prize-item">${formattedName}</span>`);
+            
+            // Sử dụng biến itemClass đã xác định ở trên
+            const $span = $(`<span class="${itemClass}">${formattedName}</span>`);
             
             // Tính toán delay: cái sau cách cái trước 0.1s
             const delay = index * 0.1; 
