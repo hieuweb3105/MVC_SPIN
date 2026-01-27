@@ -9,13 +9,13 @@
         </div>
     </div>
     <div class="col-12 col-md-8 mt-lg-5">
-        <div class="col-12 mb-2 d-flex gap-1">
+        <div class="col-12 mb-2 d-flex justify-content-between gap-1">
             <button type="button" id="btn_export"
                 class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
                 <i class="bi bi-file-earmark-text"></i>Xuất danh sách
             </button>
             <a href="/result/<?= $info_prize['id_prize'] ?>/reset"
-                class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>">
+                class="btn btn-sm btn-danger text-warning border-warning px-3 <?= $list_guest ?: 'disabled' ?>" data-bs-toggle="modal" data-bs-target="#modalReset">
                 <i class="bi bi-arrow-repeat"></i>Reset giải
             </a>
             <input type="file" id="file_excel" accept=".xlsx, .xls" class="d-none">
@@ -60,6 +60,25 @@
             </tbody>
         </table>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalReset" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark-60 blur-6 text-light">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Bạn có chắc chắn reset giải này ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm px-3 btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <a href="/result/<?= $info_prize['id_prize'] ?>/reset" class="btn btn-sm px-3 btn-danger text-warning border-warning">Reset ngay</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
