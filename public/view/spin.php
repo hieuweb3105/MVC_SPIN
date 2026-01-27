@@ -31,6 +31,11 @@
                     <div class="h4">
                         Xin chúc mừng
                     </div>
+                    <div class="h5">
+                        <span><?= $info_prize['name_prize'].' - ' ?> <?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
+                            Giải - phần quà </span>
+                        <span><?= $info_prize['name_gift_prize'] ?></span>
+                    </div>
                     <div class="text-light-60">
                         Mã số trúng thưởng :
                     </div>
