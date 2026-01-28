@@ -308,3 +308,7 @@ body {
     color: #ff0000 !important;
     font-size: 32px !important;
 }
+
+.bg-gradient {
+    background: linear-gradient(to right,var(--bs-light-01),var(--bs-dark-60),var(--bs-dark-80),var(--bs-dark-60),var(--bs-light-01)) !important;
+}

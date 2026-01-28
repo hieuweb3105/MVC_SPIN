@@ -8,17 +8,6 @@ require_once 'core/function.php';
 # [AUTO LOGIN]
 // auto_login();
 
-# [TOKEN GUEST]
-// Khởi tạo cookie token guest
-if (!isset($_COOKIE['token_guest']) || empty($_COOKIE['token_guest'])) {
-    // Tạo token và time
-    $token = create_token(20);
-    $expiry = time() + 86400 * 30;
-    // Gửi cookie về trình duyệt
-    setcookie('token_guest', $token, $expiry, "/", "", true, true);
-    // Tạo value thủ công trường hợp không cần F5 - Load lại trang
-    $_COOKIE['token_guest'] = $token;
-}
 
 # [UPGRADE PAGE]
 if(BOOL_UPGRADE) view_error(503);

@@ -1,5 +1,8 @@
 <?php
 
+# [AUTHOR]
+if($_SESSION['btc'] !== 'verify') route('verify');
+
 # [MODEL]
 model('public','guest');
 

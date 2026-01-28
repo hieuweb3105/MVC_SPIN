@@ -19,9 +19,11 @@
 
 .title-gold {
     color: var(--bs-gold) !important;
-    font-size: 35px;
-    font-weight: 600;
     text-shadow: 0 -2px 20px var(--bs-dark);
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 @media (max-width:1199px) {

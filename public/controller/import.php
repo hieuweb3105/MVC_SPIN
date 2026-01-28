@@ -1,5 +1,8 @@
 <?php
 
+# [AUTHOR]
+if($_SESSION['btc'] !== 'verify') route('verify');
+
 # [MODEL]
 require 'vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\IOFactory;
