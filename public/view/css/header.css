@@ -19,14 +19,13 @@
 
 .title-gold {
     color: var(--bs-gold) !important;
-    font-size: 36px;
+    font-size: 35px;
     font-weight: 600;
-    text-shadow: 0 0 10px var(--bs-dark);
-    font-family: 'Playfair Display', serif;
+    text-shadow: 0 -2px 20px var(--bs-dark);
 }
 
 @media (max-width:1199px) {
     .title-gold {
-        font-size: 24px;
+        font-size: 20px;
     }
 }

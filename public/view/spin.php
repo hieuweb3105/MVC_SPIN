@@ -1,13 +1,13 @@
-<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.4">
+<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.5">
 
 <div style="margin-top: 25vh" class="d-flex w-100 align-items-center justify-content-center px-3">
     <div class="col-12 d-flex flex-column align-items-center gap-3">
-        <div class="h2 text-light">
+        <div class="text-detail-spin">
             <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
                 Giải - Phần Quà </span>
             <span><?= $info_prize['name_gift_prize'] ?></span>
         </div>
-        <div class="h2 text-light">
+        <div class="text-detail-spin">
             <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>
                 奖项 - 礼品 </span>
             <span><?= $info_prize['chn_name_gift_prize'] ?></span>

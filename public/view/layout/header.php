@@ -26,8 +26,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- CSS Custom -->
-    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.0.1">
-    <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.0.1">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.0.2">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.0.2">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css">
 </head>
 

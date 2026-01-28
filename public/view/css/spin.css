@@ -64,3 +64,20 @@
         transform: scale(1);
     }
 }
+
+.text-detail-spin,.title-gold {
+    background: linear-gradient(to right,var(--bs-light-01),var(--bs-dark-60),var(--bs-dark-80),var(--bs-dark-60),var(--bs-light-01));
+}
+
+.text-detail-spin {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bs-light);
+    padding: 5px 15px;
+}
+
+.title-gold {
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 28px;
+}
