@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.6">
+<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.7">
 
-<div style="margin-top: 25vh" class="d-flex w-100 align-items-center justify-content-center px-3">
+<div class="d-flex w-100 align-items-center justify-content-center px-3">
     <div class="col-12 d-flex flex-column align-items-center gap-3">
         <div class="text-detail-spin bg-gradient">
             <span><?= $info_prize['quantity_prize'] > 10 ? $info_prize['quantity_prize'] : '0' . $info_prize['quantity_prize'] ?>

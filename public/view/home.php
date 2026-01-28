@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= URL_P_V ?>css/btc_home.css">
 
-<div style="margin-top:20vh" class="row justify-content-center align-items-center">
+<div style="padding-top:20vh" class="row justify-content-center align-items-center">
     <div class="col-12 col-md-8 mt-lg-5">
         <table class="table table-dark table-hover">
         <thead>

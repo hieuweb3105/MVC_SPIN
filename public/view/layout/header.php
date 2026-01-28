@@ -35,8 +35,6 @@
 
 <body class="">
 
-    <div class="linear-bg"></div>
-
     <div style="top:15vh" class="position-absolute start-50 translate-middle title-gold bg-gradient col-12 text-center">
         <?= $title ?>
     </div>
