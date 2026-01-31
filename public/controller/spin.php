@@ -27,8 +27,8 @@ if(get_action_uri(1)) {
 
 //Case : Quay thưởng
 if(get_action_uri(2) == 'craft_spin') {
-    // Giải 1-2-3-4
-    if($id_prize < 5) {
+    // Giải 1-2-3-4-5
+    if($id_prize < 6) {
         // rand guest
         $id_guest = prize_spin_one($get_prize['id_prize']);
         // query

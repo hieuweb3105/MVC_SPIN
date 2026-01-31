@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.7">
+<link rel="stylesheet" href="<?= URL_P_V ?>css/spin.css?v=1.0.8">
 
 <div class="d-flex w-100 align-items-center justify-content-center px-3">
     <div class="col-12 d-flex flex-column align-items-center gap-3">

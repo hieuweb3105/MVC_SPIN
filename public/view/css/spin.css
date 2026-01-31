@@ -43,11 +43,11 @@
     color: var(--bs-dark);
     font-weight: bold;
     border-radius: 8px;
-    padding: 4px;
-    font-size: 26px;
+    padding: 6px 0px;
+    font-size: 32px;
     animation: prizeShow .5s ease forwards;
     width: 7vw;
-    height: 40px;
+    height: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
