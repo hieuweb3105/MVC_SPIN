@@ -33,7 +33,7 @@
                         <a href="/result/<?=$id_prize ?>" class="btn btn-sm btn-dark text-warning border-warning <?= $total_turn ? '' : 'disabled' ?>">
                             <small><i class="bi bi-eye me-1"></i> Xem DS trúng</small>
                         </a>
-                        <a href="/spin/<?=$id_prize ?>" class="btn btn-sm btn-danger text-warning border-warning <?= $total_turn !== $quantity_prize ? '' : 'disabled' ?>">
+                        <a href="/spin/<?=$id_prize ?>" class="btn btn-sm btn-danger text-warning border-warning <?= ($total_turn != $quantity_prize) ? '' : (($id_prize > 5) ? 'disabled' : '') ?>">
                             <small><i class="bi bi-gift me-1"></i> Quay thưởng</small>
                         </a>
                     </td>

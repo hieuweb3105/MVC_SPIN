@@ -20,8 +20,10 @@ if(get_action_uri(1)) {
         route();
     }
     elseif(prize_check_spin($id_prize)) {
-        toast_create('failed','Giải này đã quay rồi !');
-        route('result/'.$id_prize);
+        if($id_prize > 5) {
+            toast_create('failed','Giải này đã quay rồi !');
+            route('result/'.$id_prize);
+        }
     }
 }else view_error(400);
 
