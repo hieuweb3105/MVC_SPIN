@@ -44,9 +44,9 @@
     font-weight: bold;
     border-radius: 8px;
     padding: 6px 0px;
-    font-size: 32px;
+    font-size: 50px;
     animation: prizeShow .5s ease forwards;
-    width: 7vw;
+    width: 15vw;
     height: auto;
     display: inline-flex;
     align-items: center;
