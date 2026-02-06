@@ -64,7 +64,7 @@ body {
     --bs-gold : #ffff00;
     --bs-gold-blur : #ffd13941;
 
-    background: url('/asset/image/bg.jpg');
+    background: url('/asset/image/bg.jpg?v=1.0.1');
     background-size: auto 100%;
     background-position: center;
     min-height: 100vh;
